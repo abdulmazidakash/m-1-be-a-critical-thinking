@@ -87,7 +87,30 @@ class LinkedList{
 		this.length++;
 	}
 
-	remove(){}
+	remove(index){
+
+		if(index === 0){
+			const removedItem = this.head.value;
+			this.head = this.head.next;
+
+			if(this.length === 1){
+				this.tail = null;
+			}
+			this.length--;
+			return removedItem;
+		}
+
+		const leadingNode = this._traverseToIndex(index - 1);
+		const nodeToRemove = leadingNode.next;
+
+		leadingNode.next = nodeToRemove.next;
+
+		if(leadingNode.next === null){
+			this.tail = leadingNode;
+		};
+
+		return nodeToRemove.value;
+	}
 
 	// private helper method
 	_traverseToIndex(index){
@@ -139,6 +162,15 @@ const linkedList = new LinkedList();
 
 // linkedList.insert(2, 100);
 
-linkedList.append(0).append(1).append(2).append(3);
+// linkedList.append(0).append(1).append(2).append(3);
 
+linkedList.append('A')
+linkedList.append('B')
+linkedList.append('C')
+linkedList.append('D')
+
+linkedList.print();
+
+linkedList.remove(2);
+linkedList.remove(0);
 linkedList.print();
