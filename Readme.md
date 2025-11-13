@@ -154,10 +154,61 @@ const combined = users.map(user => ({
 
 console.log(combined);
 // [{id:1, name:"Akash", score:90}, {id:2, name:"Sakib", score:75}]
+
+const users = [
+  { id: 101, name: "Alice" },
+  { id: 102, name: "Bob" },
+  { id: 103, name: "Charlie" },
+];
+
+const posts = [
+  { id: 1, userId: 102, title: "My first post" },
+  { id: 2, userId: 101, title: "React Hooks" },
+  { id: 3, userId: 101, title: "Data Structures" },
+  { id: 4, userId: 103, title: "CSS is fun" },
+  { id: 5, userId: 102, title: "Node.js streams" },
+];
+
+//todo create a hash table by posts
+const postByUserId = posts.reduce((table, post)=>{
+  const { userId} = post;
+
+  if(!table[userId]){
+	table[userId] = [];
+  }
+  table[userId].push(post);
+  return table;
+}, {});
+
+//0(n)
+const userWithPosts = users.map((user)=>{
+	return {
+		...user,
+
+		//0(1)
+		posts: postByUserId[user.id] || [],
+	};
+});
+
 ```
 
 🧠 *Concepts:* map(), find(), object spread
 
+---
+### **Binning (binning.js)**
+
+Groups timestamped data into fixed time intervals for data analysis.
+Example:
+
+```js
+const interval = 30 * 60 * 1000; // 30 minutes
+
+const getBinningTimeStamp = (timestamp) => {
+  const date = new Date(timestamp);
+  const floored = Math.floor(date.getTime() / interval) * interval;
+  return new Date(floored).toISOString();
+};
+```
 ---
 
 ### 🔹 5. **Sorting (sort.js)**
