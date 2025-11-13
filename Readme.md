@@ -204,12 +204,12 @@ console.log(unique); // [1, 2, 3]
 
 ## 🧠 **Practice Challenges**
 
-✅ Write a program to find **top 3 highest-priced items**.
-✅ Count how many items in each **category**.
-✅ Combine two arrays and calculate **total score** for each user.
-✅ Write custom **groupBy()** function using `reduce()`.
-✅ Find **total salary** of employees by department.
-✅ Flatten a **nested array** using `reduce()`.
+- ✅ Write a program to find **top 3 highest-priced items**.
+- ✅ Count how many items in each **category**.
+- ✅ Combine two arrays and calculate **total score** for each user.
+- ✅ Write custom **groupBy()** function using `reduce()`.
+- ✅ Find **total salary** of employees by department.
+- ✅ Flatten a **nested array** using `reduce()`.
 
 ---
 
