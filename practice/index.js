@@ -262,4 +262,352 @@ const binnedData1 = events1.reduce((acc, event)=>{
 
 }, {});
 
-console.log('binned Data: ===>', binnedData1);
+// console.log('binned Data: ===>', binnedData1);
+
+// const counter = (amount) =>{
+// 	let count = 0;
+
+// 	count = count + amount;
+// 	return count;
+// };
+
+// console.log(counter(3));
+// console.log(counter(5));
+
+// const counter = {
+// 	 count: 0,
+
+// 	 add(amount){
+// 		this.count = this.count + amount;
+// 	 },
+// 	 print(){
+// 		console.log(this.count);
+// 	 }
+// };
+
+// counter.add(3)
+// counter.add(5)
+// counter.print();
+
+// const createCounter = () =>{
+// 	let count = 0;
+
+// 	return (amount)=>{
+// 		count = count + amount;
+// 		return count;
+// 	}
+// };
+
+// const counter = createCounter();
+// console.log(counter(3));
+// console.log(counter(6));
+// console.log(counter(6));
+// class Counter{
+
+// 	constructor(count){
+// 		this.count = count;
+// 	};
+// 	add(amount){
+// 		this.count = this.count + amount;
+// 	};
+
+// 	print(){
+// 		console.log(this.count);
+// 	};
+// };
+
+// const counter1 = new Counter(0);
+// counter1.add(2);
+// counter1.add(4);
+// counter1.add(4);
+
+// counter1.print();
+
+// class Counter {
+// 	constructor(count){
+// 		this.count = count;
+// 	};
+
+// 	add(amount){
+// 		this.count = this.count + amount;
+// 	};
+
+// 	print(){
+// 		console.log(this.count);
+// 	};
+// };
+
+// const counter1 = new Counter(0);
+// counter1.add(4);
+// counter1.add(5);
+
+// counter1.print();
+
+// class BankAccount {
+// 	constructor(initialBalance){
+// 		this.balance = initialBalance;
+// 	};
+
+// 	deposit(amount){
+// 		this.balance = this.balance + amount;
+// 	};
+
+// 	withDraw(amount){
+// 		if(amount < this.balance){
+// 			this.balance = this.balance - amount;
+// 		}else{
+// 			console.log('Insufficient balance');
+// 		};
+// 	};
+
+// 	print(){
+// 		console.log('current balance ===>', this.balance);
+// 	}
+// };
+
+// const akashBalance = new BankAccount(0);
+// // akashBalance.print();
+
+// // deposit 
+// akashBalance.deposit(100);
+// // akashBalance.print();
+
+// //withdraw
+// akashBalance.withDraw(50);
+// akashBalance.print();
+
+// class Stack {
+// 	constructor(){
+// 		this.items = [];
+// 	};
+
+// 	push(value){
+// 		this.items.push(value);
+// 	};
+
+// 	pop(){
+// 		if(this.isEmpty()){
+// 			return undefined;
+// 		};
+// 		return this.items.pop();
+// 	};
+
+// 	peek(){
+// 		if(this.isEmpty()){
+// 			return undefined;
+// 		}
+// 		return this.items[this.items.length - 1];
+// 	};
+
+// 	isEmpty(){
+// 		return this.items.value === 0;
+// 	};
+
+// 	print(){
+// 		console.log(this.items.slice().reverse().join(' => '));
+// 	};
+// };
+
+// const stack = new Stack();
+
+// console.log(stack.peek());
+// console.log(stack.isEmpty());
+
+// stack.push(2);
+// stack.push(3);
+// stack.push(4);
+
+// stack.print();
+// console.log(stack.peek());
+
+// console.log(stack.pop());
+
+
+// console.log(stack);
+
+// class Stack {
+// 	constructor(){
+// 		this.items = [];
+// 	};
+
+// 	//push
+// 	push(value){
+// 		this.items.push(value);
+// 	};
+
+// 	//pop
+// 	pop(value){
+// 		console.log('pop value===>', this.items.value);
+// 		if(this.isEmpty()){
+// 			return undefined;
+// 		};
+
+// 		return this.items.pop(value);
+// 	}
+// 	//peek
+// 	peek(){
+// 		return this.items[this.items.length - 1];
+// 	}
+// 	//
+// 	isEmpty(){
+// 		return this.items.value === 0 ;
+// 	};
+
+// 	//print
+// 	print(){
+// 		console.log(this.items);
+// 	}
+// };
+
+// const stack = new Stack();
+// // console.log(stack);
+// stack.push(2);
+// stack.push(4);
+// stack.push(6);
+// stack.isEmpty();
+// console.log(stack);
+
+// stack.pop();
+// console.log('pop value', stack.pop());
+// console.log(stack);
+// stack.push(44)
+// stack.push(55);
+// console.log(stack);
+
+// console.log('peek value ===>',stack.peek());;
+// // console.log(stack);
+// stack.print();
+
+// class myStack {
+//     constructor(cap) {
+        
+//         // array to store elements
+//         this.arr = new Array(cap); 
+        
+//         // maximum size of stack
+//         this.capacity = cap;       
+        
+//         // index of top element
+//         this.top = -1;             
+//     }
+
+//     // push operation
+//     push(x) {
+//         if (this.top === this.capacity - 1) {
+//             console.log("Stack Overflow");
+//             return;
+//         }
+//         this.arr[++this.top] = x;
+//     }
+
+//     // pop operation
+//     pop() {
+//         if (this.top === -1) {
+//             console.log("Stack Underflow");
+//             return -1;
+//         }
+//         return this.arr[this.top--];
+//     }
+
+//     // peek (or top) operation
+//     peek() {
+//         if (this.top === -1) {
+//             console.log("Stack is Empty");
+//             return -1;
+//         }
+//         return this.arr[this.top];
+//     }
+
+//     // check if stack is empty
+//     isEmpty() {
+//         return this.top === -1;
+//     }
+
+//     // check if stack is full
+//     isFull() {
+//         return this.top === this.capacity - 1;
+//     }
+// }
+
+// // Driver Code
+// let st = new myStack(4);
+
+// // pushing elements
+// st.push(1);
+// st.push(2);
+// st.push(3);
+// st.push(4);
+
+// // popping one element
+// console.log("Popped: " + st.pop());
+
+// // checking top element
+// console.log("Top element: " + st.peek());
+
+// // checking if stack is empty
+// console.log("Is stack empty: " + (st.isEmpty() ? "Yes" : "No"));
+
+// // checking if stack is full
+// console.log("Is stack full: " + (st.isFull() ? "Yes" : "No"));
+
+
+// queue array implementation
+
+class Queue {
+	constructor(){
+		this.items = [];
+	};
+
+	enqueue(value){
+		return this.items.push(value);
+	};
+
+	dequeue(){
+		if(this.isEmpty()){
+			return undefined;
+		};
+
+		return this.items.shift();
+	};
+
+	peek(){
+		if(this.isEmpty()){
+			return undefined;
+		};
+
+		return this.items[0];
+	}
+
+	isEmpty(){
+		return this.items.value === 0;
+	};
+
+	print(){
+		console.log('start: ==>',this.items.join(' => '), ' <==:end');
+	};
+};
+
+const queue = new Queue();
+console.log('initial queue: ===>',queue);
+
+console.log('enqueue: ==>',queue.enqueue(2));
+console.log('enqueue: ==>',queue.enqueue(1));
+console.log('enqueue: ==>',queue.enqueue(3));
+
+queue.print();
+
+console.log('dequeue: ==>', queue.dequeue());;
+
+queue.print();
+
+console.log('peek: ==>', queue.peek());
+
+queue.print();
+
+console.log('is empty: ==>', queue.isEmpty());
+
+queue.dequeue();
+queue.dequeue();
+queue.dequeue();
+queue.print();
+console.log('is empty: ==>', queue.isEmpty());
